@@ -1,0 +1,9 @@
+{
+  "title": "example json",
+  "teacher": {
+    "id": "1",
+    "firstName": "Linda",
+    "lastName": "Smith",
+    "subject": "English"
+  }
+}
