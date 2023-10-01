@@ -15,7 +15,7 @@ public class JsonParsingTest {
 
     @Test
     @DisplayName("Проверка содержимого JSON-файла")
-    void jsonParsingTest() throws Exception {
+    void checkingJsonContent() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         TeachersModel teacher = objectMapper.readValue(new File(pathToJson), TeachersModel.class);
 
