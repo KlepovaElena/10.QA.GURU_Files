@@ -3,6 +3,7 @@ package guru.qa;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.qa.model.TeachersModel;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -13,6 +14,7 @@ public class JsonParsingTest {
 
 
     @Test
+    @DisplayName("Проверка содержимого JSON-файла")
     void jsonParsingTest() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         TeachersModel teacher = objectMapper.readValue(new File(pathToJson), TeachersModel.class);

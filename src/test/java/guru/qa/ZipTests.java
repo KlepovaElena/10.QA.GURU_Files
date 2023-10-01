@@ -25,8 +25,8 @@ public class ZipTests {
     ClassLoader cl = ZipTests.class.getClassLoader();
 
     @Test
-    @DisplayName("csv")
-    void csvTest() throws Exception {
+    @DisplayName("Проверка содержимого CSV-файла")
+    void checkingCsvContent() throws Exception {
         try (InputStream zipStream = cl.getResourceAsStream(zip);
              ZipInputStream zipInputStream = new ZipInputStream(Objects.requireNonNull(zipStream))) {
             ZipEntry zipEntry;
@@ -51,7 +51,8 @@ public class ZipTests {
     }
 
     @Test
-    void xlsTest() throws Exception {
+    @DisplayName("Проверка содержимого XLSX-файла")
+    void checkingXlxsContent() throws Exception {
         try (InputStream zipStream = cl.getResourceAsStream(zip);
              ZipInputStream zipInputStream = new ZipInputStream(Objects.requireNonNull(zipStream))) {
             ZipEntry zipEntry;
@@ -72,7 +73,8 @@ public class ZipTests {
     }
 
     @Test
-    void pdfTest() throws Exception {
+    @DisplayName("Проверка содержимого PDF-файла")
+    void checkingPdfContent() throws Exception {
         try (InputStream zipStream = cl.getResourceAsStream(zip);
              ZipInputStream zipInputStream = new ZipInputStream(Objects.requireNonNull(zipStream))) {
             ZipEntry zipEntry;
